@@ -1,0 +1,42 @@
+{
+    "name": "ESP-IDF DevContainer",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/${localWorkspaceFolderBasename},type=bind",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "ESP_IDF_VERSION": "v5.5"
+        }
+    },
+    "remoteUser": "ubuntu",
+    "remoteEnv": {
+        "PATH": "${containerEnv:PATH}:/home/ubuntu/bin"
+    },
+    "mounts": [
+        "source=extensionCache-espidf,target=/root/.vscode-server/extensions,type=volume"
+    ],
+    "postStartCommand": "/home/ubuntu/.config/init_esp-idf.sh",
+    "runArgs": [
+        "--privileged",
+        "-v",
+        "/dev/bus/usb:/dev/bus/usb"
+    ],
+    //"containerEnv": {
+    //    "EXTRA_COMPONENT_DIRS": "/home/ubuntu/libs/arduino-libs"
+    //},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "espressif.esp-idf-extension",
+                "ms-vscode.cpptools"
+            ],
+            "settings": {
+                "idf.espIdfPath": "/opt/esp/idf",
+                "idf.toolsPath": "/opt/esp",
+                "idf.customExtraVars": {
+                    "IDF_PATH": "/opt/esp/idf"
+                },
+                "idf.gitPath": "/usr/bin/git"
+            }
+        }
+    }
+}

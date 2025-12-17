@@ -1,0 +1,6 @@
+.git/
+build/
+managed_components/
+sdkconfig.old
+.dump_ignore
+

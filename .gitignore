@@ -1,0 +1,10 @@
+# ----------------------------
+# devcontainer-only repository
+# ----------------------------
+*
+!/.devcontainer/
+!/.devcontainer/**
+!.gitignore
+!.dump_ignore
+!LICENSE
+!README.md
