@@ -8,6 +8,5 @@ RUN usermod -a -G dialout ubuntu
 
 USER ubuntu
 WORKDIR /home/ubuntu
-RUN mkdir -p /home/ubuntu/bin
-COPY --chmod=755 --chown=ubuntu:ubuntu /scripts/idf /home/ubuntu/bin/idf
+COPY --chmod=644 --chown=ubuntu:ubuntu /scripts/.bashrc /home/ubuntu/.bashrc
 COPY --chmod=755 --chown=ubuntu:ubuntu /scripts/init_esp-idf.sh /home/ubuntu/.config/init_esp-idf.sh

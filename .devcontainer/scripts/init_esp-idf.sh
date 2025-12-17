@@ -25,5 +25,3 @@ SAFE_DIRS=(
 for dir in "${SAFE_DIRS[@]}"; do
   add_safe_directory "$dir"
 done
-
-source /opt/esp/idf/export.sh
