@@ -4,7 +4,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "ESP_IDF_VERSION": "v5.5"
+            "ESP_IDF_VERSION": "v5.5.1"
         }
     },
     "remoteUser": "ubuntu",
