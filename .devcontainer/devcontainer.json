@@ -20,9 +20,11 @@
         "-v",
         "/dev/bus/usb:/dev/bus/usb"
     ],
-    //"containerEnv": {
+    "containerEnv": {
+        "LC_ALL": "C.UTF-8",
+        "LANG": "C.UTF-8"
     //    "EXTRA_COMPONENT_DIRS": "/home/ubuntu/libs/arduino-libs"
-    //},
+    },
     "customizations": {
         "vscode": {
             "extensions": [
